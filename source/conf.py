@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Docs'
-copyright = '2020, Prokura Innovations Pvt. Ltd.'
+project = 'prokuranepal.github.io'
+copyright = '2020-2021, Prokura Innovations Pvt. Ltd.'
 author = 'Prokura Innovations Pvt. Ltd.'
 
 
@@ -51,4 +51,3 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 master_doc = 'index'
-

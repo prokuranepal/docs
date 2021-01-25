@@ -1,27 +1,20 @@
-sudo: true
-env:
-  global:
+---
+os: linux
+dist: bionic
 
 language: python
-python:
-  - "3.7"
+python: 3.9
+cache: pip
 
-before_script:
-  - sudo pip install -U sphinx
-
-script:
-  - make html
-  - touch docs/html/.nojekyll
-  - touch docs/.nojekyll
-#   - CI=false npm run build
+before_script: pip install -U sphinx
+script: make clean html
 
 deploy:
   - provider: pages
     verbose: true
     github_token: $GITHUB_TOKEN
     edge: true
-    local_dir: ./docs/html/
+    local_dir: ./_build/html/
     keep_history: true
     on:
-      branch: master
-
+      branch: main
